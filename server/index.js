@@ -127,7 +127,7 @@ app.get('/problems', (req, res) => {
 
 });
 
-app.get('/problems/id', (req, res) => {
+app.get('/problems/:id', (req, res) => {
   const id= req.params.id;
   
   const problem= PROBLEMS.find((x)=>x.problemId===id);

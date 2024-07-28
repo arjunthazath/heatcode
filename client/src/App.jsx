@@ -6,6 +6,7 @@ import SignUp from './SignUp.jsx';
 import './App.css';
 import ProblemList from './ProblemList.jsx';
 import ProblemDetail from './ProblemDetail.jsx';
+import Submissions from './Submissions.jsx';
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/problems" element={<ProblemList />} />
             <Route path="/problems/:pid" element={<ProblemDetail />} />
+            <Route path="/submissions" element={<Submissions />} />
           </Routes>
         </div>
       </CSSTransition>

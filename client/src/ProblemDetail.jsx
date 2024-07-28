@@ -72,7 +72,10 @@ function ProblemDetail() {
         <div>
           <div className="topbox">
             <img alt="leetcode-logo" className="leetcode" src={leetcode} />
-            <button onClick={() => navigate("/logout")}>Logout</button>
+            <div className="buttons">
+              <button id="sub" onClick={() => navigate("/submissions")}>Submissions</button>
+              <button onClick={() => navigate("/logout")}>Logout</button>
+            </div>
           </div>
           <div className="mainbox">
             <div className="leftbox">
