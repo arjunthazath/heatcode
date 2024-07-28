@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(78, 78, 78, 0.263);
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  box-shadow: 2px 2px 2px rgba(120, 120, 120, 0.441);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 450px; /* Consistent margin */
+  padding: 30px;
+  background-color: white;
+  width: 360px; /* Consistent width */
+  height: 500px; /* Consistent height */
+}
+
+.leetcode {
+  width: 144px;
+  height: 96px;
+  margin-bottom: 16px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px; /* Adjusted for consistency */
+  width: 340px;
+  /* border: 1px solid black; */
+  height: 330px; /* Adjusted for consistency */
+}
+
+.details input {
+  margin-bottom: 20px;
+  width: 300px;
+  height: 30px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.502);
+}
+
+.details input:hover{
+  border: 1px solid rgba(32, 32, 32, 0.795);
+}
+
+.details select,option{
+  width: 317px;
+  height: 47px;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.502);
+}
+
+.details button {
+  margin-top: 50px !important;
+  width: 325px;
+  height: 50px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 132, 0, 0.589);
+  cursor: pointer;
+  color: black;
+  font-size: 15px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  background: linear-gradient(90deg, #f3b509, hsl(26, 100%, 66%));
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.details button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f4710d, #ffab2d); /* Gradient color on hover */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease; /* Smooth transition for background gradient */
+}
+
+.details button:hover::before {
+  transform: scaleX(1);
+}
+
+.links {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 0;
+  display: flex;
+  width: 320px;
+}
+
+.links a {
+  transition: color 0.3s ease;
+  color: rgba(151, 151, 151, 0.788);
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: black;
+  font-weight: 500;
+}
+
+.forgot {
+  margin-right: 130px;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  color: rgba(151, 151, 151, 0.651);
+  font-weight: 500;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(184, 184, 184, 0.651);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.social-icons a:hover .google {
+  background-color: red;
+}
+
+.social-icons a:hover .facebook {
+  background-color: rgb(3, 12, 182);
+}
+
+.social-icons a:hover .git {
+  background-color: black;
+}
+
+.social-icons a:hover .linkedin {
+  background-color: rgb(76, 76, 76);
+}
