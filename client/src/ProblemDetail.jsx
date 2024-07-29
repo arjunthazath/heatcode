@@ -66,6 +66,11 @@ function ProblemDetail() {
     }, 2000);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
   return (
     <div>
       {problem ? (
@@ -74,7 +79,7 @@ function ProblemDetail() {
             <img alt="leetcode-logo" className="leetcode" src={leetcode} />
             <div className="buttons">
               <button id="sub" onClick={() => navigate(`/submissions/${cleanId}`)}>Submissions</button>
-              <button onClick={() => navigate("/logout")}>Logout</button>
+              <button onClick={handleLogout}>Logout</button>
             </div>
           </div>
           <div className="mainbox">

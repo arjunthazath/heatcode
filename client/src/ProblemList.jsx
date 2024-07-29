@@ -1,11 +1,18 @@
 //ProblemList.jsx
 import React, { useEffect, useState } from 'react';
 import './ProblemList.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import leetcode from './assets/leetcode-logo.png';
 
 function ProblemsList() {
     const [problems, setProblems] = useState([]);
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        navigate("/login");
+      };
+
 
     const init = async () => {
         try {
@@ -27,7 +34,7 @@ function ProblemsList() {
         <div className='page'>
             <div className='header'>
                 <img alt="leetcode-logo" className="leetcode" src={leetcode}></img>
-                <button>Logout</button>
+                <button onClick={handleLogout}>Logout</button>
             </div>
             <div className="fullbox">
                 <table>
