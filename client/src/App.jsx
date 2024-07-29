@@ -30,7 +30,7 @@ const App = () => {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/problems" element={<ProblemList />} />
             <Route path="/problems/:pid" element={<ProblemDetail />} />
-            <Route path="/submissions" element={<Submissions />} />
+            <Route path="/submissions/:pid" element={<Submissions />} />
           </Routes>
         </div>
       </CSSTransition>
