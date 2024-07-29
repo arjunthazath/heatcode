@@ -20,3 +20,13 @@ th {
 tr:hover {
     background-color: #f5f5f5;
 }
+
+.status-ac {
+    background-color: green;
+    color: white;
+}
+
+.status-wa {
+    background-color: red;
+    color: white;
+}

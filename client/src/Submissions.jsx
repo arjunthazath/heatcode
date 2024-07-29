@@ -1,4 +1,3 @@
-//Submissions.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Submissions.css';
@@ -29,7 +28,7 @@ function Submissions() {
 
     return (
         <div className="submissions-container">
-            <h1>Submissions for Problem {cleanId}</h1>
+            <h1>Submissions for Problem {pid}</h1>
             <table>
                 <thead>
                     <tr>
@@ -41,7 +40,7 @@ function Submissions() {
                     {submissions.map((submission, index) => (
                         <tr key={index}>
                             <td>{submission.submission}</td>
-                            <td>{submission.status}</td>
+                            <td className={submission.status === "AC" ? "status-ac" : "status-wa"}>{submission.status}</td>
                         </tr>
                     ))}
                 </tbody>
